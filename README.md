@@ -104,5 +104,5 @@ chmod +x run.sh
 
 ./run.sh
 
-#if the 
+#if the tensor error is present check the camera source in the demo
 ```
