@@ -55,6 +55,7 @@ cd pytorch
 ```bash
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 python setup.py install
+cd ..
 ```
 
 ## install project dependencies
@@ -67,7 +68,8 @@ conda install ipython
 pip install ninja yacs cython matplotlib
 
 
-conda install pytorch-nightly -c pytorch
+#install this only if you don't compile from source
+#conda install pytorch-nightly -c pytorch
 
 export INSTALL_DIR=$PWD
 # install torchvision
@@ -76,6 +78,7 @@ git clone https://github.com/pytorch/vision.git
 cd vision
 python setup.py install
 
+#install pycoco only for training new model. Currently this is not required for the demo
 # install pycocotools
 cd $INSTALL_DIR
 git clone https://github.com/cocodataset/cocoapi.git
@@ -89,8 +92,8 @@ cd maskrcnn-benchmark
 
 python setup.py build develop
 
-#install the correct version of scikit
-conda install scikit-image=0.14.0
+#install the correct version of opencv
+pip install opencv-python==4.0.0.21
 
 unset INSTALL_DIR
 
