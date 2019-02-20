@@ -106,3 +106,10 @@ chmod +x run.sh
 
 #if the tensor error is present check the camera source in the demo
 ```
+
+
+### TODO
+
+- [X] setup demo with read me
+- [ ] Integrate the ROS code 
+	("Need to fix the correct version of python not being used with conda. Try exploring virtualenv with catkin workspace")
