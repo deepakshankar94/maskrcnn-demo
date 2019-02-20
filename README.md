@@ -38,15 +38,11 @@ export NO_CUDA=1
 
 - Install Dependencies
 
-Common
+
 ```
 conda install numpy pyyaml mkl mkl-include setuptools cmake cffi typing
 ```
 
-On Linux
-```bash
-conda install -c pytorch
-```
 
 - Get the PyTorch Source
 ```bash
